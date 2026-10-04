@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+.hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("https://images.unsplash.com/photo-1513104890138-7c749659a591")
+                center/cover;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.hero h1 span {
+    color: #ff9800;
+}
+
+.hero p {
+    color: white;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.menu-btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section h2 {
+    text-align: center;
+    margin: 40px 0 25px;
+    font-size: 32px;
+}
+
+.customer {
+    padding: 20px;
+}
+
+.customer-input {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.customer-input input {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 8%;
+}
+
+.food-card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-image {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.food-card h3 {
+    font-size: 22px;
+}
+
+.food-card p {
+    color: #777;
+    margin: 10px 0;
+}
+
+.food-card h4 {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.food-card button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.food-card button:hover {
+    background: #e68900;
+}
+
+.billing {
+    padding: 20px;
+}
+
+.bill-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bill-header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.bill-header h2 {
+    margin: 0;
+}
+
+.bill-box > p {
+    margin: 8px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+.delete-btn {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.total-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.total-section p {
+    margin: 8px;
+}
+
+.total-section h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #e65100;
+}
+
+.generate-btn, .clear-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.generate-btn {
+    background: #4caf50;
+}
+
+.clear-btn {
+    background: #e53935;
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .customer-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customer-input input {
+        width: 90%;
+    }
+
+    .bill-box {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}

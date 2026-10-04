@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriTaste - Restaurant Billing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🍽️ TriTaste</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#billing">Billing</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <h1>Welcome to <span>TriTaste</span></h1>
+        <p>Taste More. Enjoy More.</p>
+        <a href="#menu" class="menu-btn">View Menu</a>
+    </div>
+</section>
+
+<section class="customer">
+    <h2>Customer Details</h2>
+    <div class="customer-input">
+        <input type="text" id="customerName" placeholder="Customer Name">
+        <input type="text" id="tableNumber" placeholder="Table Number">
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+
+        <div class="food-card">
+            <div class="food-image">🍕</div>
+            <h3>Pizza</h3>
+            <p>Cheesy delicious pizza</p>
+            <h4>₹200</h4>
+            <button onclick="addItem('Pizza', 200)">Add to Order</button>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image">🍔</div>
+            <h3>Burger</h3>
+            <p>Fresh and tasty burger</p>
+            <h4>₹100</h4>
+            <button onclick="addItem('Burger', 100)">Add to Order</button>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image">🍝</div>
+            <h3>Pasta</h3>
+            <p>Creamy Italian pasta</p>
+            <h4>₹150</h4>
+            <button onclick="addItem('Pasta', 150)">Add to Order</button>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image">🥪</div>
+            <h3>Sandwich</h3>
+            <p>Fresh vegetable sandwich</p>
+            <h4>₹80</h4>
+            <button onclick="addItem('Sandwich', 80)">Add to Order</button>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image">🥤</div>
+            <h3>Cold Drink</h3>
+            <p>Refreshing chilled drink</p>
+            <h4>₹50</h4>
+            <button onclick="addItem('Cold Drink', 50)">Add to Order</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="billing" class="billing">
+    <h2>Your Bill</h2>
+    <div class="bill-box">
+
+        <div class="bill-header">
+            <h2>🍽️ TriTaste</h2>
+            <p>Restaurant Billing System</p>
+        </div>
+
+        <p>Customer: <span id="billCustomer">---</span></p>
+        <p>Table: <span id="billTable">---</span></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="billItems"></tbody>
+        </table>
+
+        <div class="total-section">
+            <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+            <p>GST (5%): ₹<span id="gst">0.00</span></p>
+            <h3>Total: ₹<span id="total">0.00</span></h3>
+        </div>
+
+        <button class="generate-btn" onclick="generateBill()">Generate Bill</button>
+        <button class="clear-btn" onclick="clearBill()">Clear Bill</button>
+    </div>
+</section>
+
+<footer>
+    <h3>🍽️ TriTaste</h3>
+    <p>Taste More. Enjoy More.</p>
+    <p>© 2026 TriTaste Restaurant</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
